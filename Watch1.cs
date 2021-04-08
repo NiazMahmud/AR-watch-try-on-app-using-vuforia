@@ -46,13 +46,21 @@ public class Watch1 : MonoBehaviour
     public void CloseBC()
     {
         string buttonName = EventSystems.current.currentSelectedGameObject.name;
+        
+        
         if (buttonName == "w1close"){
+
+            w1WinAnimation["w1animation"].speed = -1;
+            w1WinAnimation["w1animation"].time = w1WinAnimation ["w1animation"].length;
+            w1WinAnimation.Play();
 
         }
         else if (buttonName == w2close)
         {
+            w2WinAnimation["w2animation"].speed = -1;
+            w2WinAnimation["w2animation"].time = w2WinAnimation ["w2animation"].length;
+            w2WinAnimation.Play();
 
-            
         }
     }
 
