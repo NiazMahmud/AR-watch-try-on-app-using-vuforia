@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Watch1 : MonoBehaviour
 {
@@ -36,6 +37,24 @@ public class Watch1 : MonoBehaviour
      watchm1.SetActive(false);
      watchm2.SetActive(true);
 
+
+    w2WinAnimation["w1animation"].speed = 1;
+    w2WinAnimation.Play();
+
+
+
+    public void CloseBC()
+    {
+        string buttonName = EventSystems.current.currentSelectedGameObject.name;
+        if (buttonName == "w1close"){
+
+        }
+        else if (buttonName == w2close)
+        {
+
+            
+        }
+    }
 
  }
    
