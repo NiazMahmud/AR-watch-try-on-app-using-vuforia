@@ -10,11 +10,48 @@ public class Watch1 : MonoBehaviour
     public GameObject ww1;
     public GameObject ww2;
 
+
+    Animation w1WinAnimation;
+    Animation w2WinAnimation;
+
     // Start is called before the first frame update
     void Start()
     {
+        w1WinAnimation = ww1.GetComponent<Animation>();
+        w2WinAnimation = ww2.GetComponent<Animation>();
         
     }
+ public void WatchOneBC()
+ {
+     watchm1.SetActive(true);
+     watchm2.SetActive(false);
 
+     w1WinAnimation["w1animation"].speed = 1;
+     w1WinAnimation.Play();
+
+
+ }
+    public void WatchYTwoBC()
+ {
+     watchm1.SetActive(false);
+     watchm2.SetActive(true);
+
+
+ }
    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
